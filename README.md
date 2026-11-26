@@ -14,12 +14,13 @@ This repository records an AI-assisted mathematical research project on multidim
 | 02 | [Initial kernel obstruction](round-02-general/INITIAL_KERNEL_OBSTRUCTION.md) | Draft extension to time-dependent Gaussian kernels with at least two initial null directions. |
 | 02 | [Blind subspace obstruction](round-02-general/BLIND_SUBSPACE_OBSTRUCTION.md) | Frozen-branch and blind-subspace mechanisms. |
 | 02 | [Literature audit](round-02-general/LITERATURE_AUDIT.md) | Literature dependencies, caveats, and novelty boundaries. |
-
 | 03 | [Vanishing adaptive regularization and entrance classification](round-03-entrance/ENTRANCE_THEOREMS.md) | Draft proofs of zero-initial-noise adaptive repair, exact universal continuous-path raw-filtration classification, and a quantitative entrance defect criterion. Fixed-path usual-filtration corank one remains unresolved. |
+
+| 04 | [Critical noise scales](round-04-critical-scale/CRITICAL_SCALE_THEOREMS.md) | Draft sharp universal power-law exponent for deterministic initial states in the energy clock; log-scale obstruction for exponent greater than two; corank-one sufficient subclass with frozen transverse marginals. |
 
 ## Verification and reproducibility
 
-Stages 01 and 02 preserve their original Lean 4.19.0 / Mathlib v4.19.0 project configuration. The archived build logs report successful compilation and standard-axiom-only audits for 11 declarations in stage 01 and 21 in stage 02. These checks concern the listed matrix, integral and probability lemmas, not a complete formalization of the stochastic-process theorems. The initial archive was packaged without recompiling; original source hashes were verified. Stage 03 includes an uncompiled Lean candidate and four exact symbolic checks; its stochastic-process proofs and Lean source have not been independently or kernel verified. Temporary workspace prefixes in logs were redacted for publication (see the archive notes).
+Stages 01 and 02 preserve their original Lean 4.19.0 / Mathlib v4.19.0 project configuration. The archived build logs report successful compilation and standard-axiom-only audits for 11 declarations in stage 01 and 21 in stage 02. These checks concern the listed matrix, integral and probability lemmas, not a complete formalization of the stochastic-process theorems. The initial archive was packaged without recompiling; original source hashes were verified. Stages 03 and 04 include uncompiled Lean candidates and exact algebraic checks; their stochastic-process proofs and Lean sources have not been independently or kernel verified. See the [proof dependency audit](round-04-critical-scale/PROOF_DEPENDENCY_AUDIT.md) for the distinction between formalized lemmas and mathematical conclusions. Temporary workspace prefixes in logs were redacted for publication (see the archive notes).
 
 With Elan and a network connection, run from each stage's directory:
 
@@ -37,13 +38,18 @@ cd ../round-03-entrance
 lake update
 lake exe cache get
 lake env lean EntranceCore.lean
+cd ../round-04-critical-scale
+lake update
+lake exe cache get
+lake env lean CriticalScale.lean
 ```
 
 From the repository root, verify the delivered file checksums using `sha256sum -c SHA256SUMS` (or `shasum -a 256 -c SHA256SUMS` on macOS).
 
 ## Open research targets
 
-- Classify fixed prescribed time-dependent Gaussian smoothing with exactly one initial null direction under the usual filtration, especially when the covariance is positive definite at every positive time.
+- Classify fixed prescribed time-dependent Gaussian smoothing with exactly one initial null direction under the usual filtration, especially with evolving transverse coordinates. Stage 04 settles a frozen-transverse subclass.
+- Determine the critical logarithmic correction in the deterministic-start energy clock and extend the critical-scale theorem to general initial laws.
 - Obtain distribution-level necessary and sufficient conditions for Markov realization.
 - Resolve the general unregularized raw natural filtration question distinguished in the regularized Kellerer literature (stage 03 classifies the continuous-path universally Gaussian-regularized case, not this general question).
 - Characterize instance-specific minimum regularization for non-Gaussian marginals under a specified cost.

@@ -1,0 +1,9 @@
+Round 04 actual checks
+Local lean / lake / elan: unavailable (command -v checked)
+GitHub Lean 4.19.0 release download probe: curl error 6, could not resolve host github.com
+Lean compilation and kernel axiom audit for rounds 03 and 04: NOT RUN
+Round 01/02 packaged manifest: 24/24 entries OK (sha256sum -c)
+SymPy: exact coupling recurrence and four affine Bregman identities: PASS (5/5)
+Exact Fraction sanity test: nonnegative Bregman gap and crossing certificate: PASS (12005 rational triples)
+These finite checks are not a proof for all real inputs and are not Lean compilation.
+Full stochastic-process conclusions remain mathematical research drafts.

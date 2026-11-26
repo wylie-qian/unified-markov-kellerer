@@ -1,5 +1,5 @@
 adef08b2b5f19873a913d08d5fb8160ab80bde76e8de95cf8ae5646accbad274  ./.gitignore
-7c23a61203ee94a060195f1c6320df95381d76289ff6cb7fc000237db543fed5  ./README.md
+ee1dea28d0a83442e56881ee77c3994ac15b9287c383e2b7bbc32701406a049b  ./README.md
 8a7dfce9be2974ddb5f5e1bd1d1247dc8fa16683fe298ad8ace7e70e0fd96f11  ./round-01-gaussian/ARCHIVE_NOTE.md
 57a259b2894637f359d7d96e9982ccb55dd5a800c2da26671e18601fedf85134  ./round-01-gaussian/KELLERER_RESEARCH_REPORT.md
 8be42222fe62cce109e47423e50125fc1f9aece6e5ad76dc74ca16ee4677ca90  ./round-01-gaussian/KellererCore.lean
@@ -28,3 +28,10 @@ ef6ad8a1f298072fedcde847a65add9b3d0a50721776452fa6e3f5060e671957  ./round-03-ent
 c2016db8a4be7faa981d4e0b9be6414c0507ef455e6777c1bd556a3259f592bb  ./round-03-entrance/verification.log
 5f98bed62151d5acd6835a249044297980734acce858e31567f4f26495d82262  ./round-03-entrance/lakefile.toml
 55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea  ./round-03-entrance/lean-toolchain
+496789f591f16b35df396e0ab4406a470ea2651308c09ea3c3c63f71885776de  ./round-04-critical-scale/CRITICAL_SCALE_THEOREMS.md
+566efcf30e3c46cee4c3fe33ce8281e7c8ee9dd7843aaa07b9f3607ade0e8cbe  ./round-04-critical-scale/CriticalScale.lean
+49045680dba6dfcdde4cf6f48525dc0f35db528c2a87f7efa52e609a7070d4b4  ./round-04-critical-scale/PROOF_DEPENDENCY_AUDIT.md
+4828e354439858c07bb392302f79d322f5d16f8fadd106d880edd9528cf7a2c2  ./round-04-critical-scale/README.md
+1f3e81fcedd22b4d6cc4ac3f0bfdce5beabd7d9bd6437f54cb70b9caf09e2fa8  ./round-04-critical-scale/verification.log
+47ac3cfb65dd9dce90b9566e9c9878dd6c58c6f03a1813d30a4b95fbaefaba88  ./round-04-critical-scale/lakefile.toml
+55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea  ./round-04-critical-scale/lean-toolchain
