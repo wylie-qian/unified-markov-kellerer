@@ -1,0 +1,37 @@
+KellererCore — actual Lean compilation and axiom audit
+Started UTC: 2026-11-26T19:41:54.751575+00:00
+Finished UTC: 2026-11-26T19:42:12.556060+00:00
+Elapsed seconds: 17.804
+Compiler: Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)
+Mathlib release: v4.19.0
+Mathlib lean-toolchain: leanprover/lean4:v4.19.0
+Working directory: [original-workspace]/kellerer_runtime/mathlib4-4.19.0
+Command: lake env lean [original-workspace]/kellerer_deliverable/KellererCore.lean
+LEAN_PATH override: unset; only Lake-managed dependency paths are used
+Source SHA256: 8be42222fe62cce109e47423e50125fc1f9aece6e5ad76dc74ca16ee4677ca90
+Source lines: 578
+
+--- Actual combined compiler stdout/stderr ---
+'SpectralRepair.trace_optimal_repair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SpectralRepair.trace_minimizer_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SpectralRepair.trace_equality_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IntegratedRepair.integral_trace_minimum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IntegratedRepair.integral_trace_equality_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IntegratedRepair.initial_plus_running_minimum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IntegratedRepair.initial_plus_running_equality_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NoLeastRepair.no_least_covariance_repair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NoLeastRepair.trace_equality_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NoLeastRepair.original_rate_posDef' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NoLeastRepair.ellipticity_repair_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+--- End actual compiler output ---
+
+Compiler exit code: 0
+Error diagnostics: 0
+Warning diagnostics: 0
+Audited declarations: 11
+All printed axiom sets exactly standard: True
+Proof-token audit (comments excluded): {'sorry': 0, 'admit': 0, 'axiom': 0, 'sorryAx': 0}
+Formal scope: matrix and integrated trace optimization plus no-least matrix counterexample.
+Not a formalization of Brownian construction, Markov existence, or the general Kellerer problem.
+
+PASS

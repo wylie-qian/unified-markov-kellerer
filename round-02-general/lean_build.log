@@ -1,0 +1,47 @@
+Unified Markov research — actual Lean compilation and axiom audit
+Started UTC: 2026-11-26T20:17:33.757944+00:00
+Compiler: Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)
+Mathlib release: v4.19.0
+Mathlib lean-toolchain: leanprover/lean4:v4.19.0
+Working directory: [original-workspace]/kellerer_runtime/mathlib4-4.19.0
+LEAN_PATH override: unset; only Lake-managed dependencies are used
+
+Command: lake env lean [original-workspace]/kellerer_round2/KernelGeometry.lean
+Source audit: {"source": "KernelGeometry.lean", "sha256": "7446bb342f79233cf2f1e6e444aed7f935df45bba3edf52dd4f0f8ba4fe7dc71", "lines": 316, "exit_code": 0, "errors": 0, "warnings": 0, "audited_declarations": 12, "all_axioms_standard": true, "proof_token_audit": {"sorry": 0, "admit": 0, "axiom": 0, "sorryAx": 0}}
+Actual combined compiler stdout/stderr:
+'KernelGeometry.kernel_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KernelGeometry.kernel_antitone' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KernelGeometry.integral_posSemidef' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KernelGeometry.quadratic_integral_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KernelGeometry.integral_mulVec_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KernelGeometry.kernel_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KernelGeometry.positive_weighted_normalized_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KernelGeometry.positive_weight_kernel_independent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KernelGeometry.positive_weighted_normalized_vs_total_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KernelGeometry.gaussian_kernel_independent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KernelGeometry.gaussian_kernel_eq_total' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KernelGeometry.glaeser_quadratic_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+End compiler output
+
+Command: lake env lean [original-workspace]/kellerer_round2/GermObstructionCore.lean
+Source audit: {"source": "GermObstructionCore.lean", "sha256": "0fc926147b2d89a870f72818cca422a68a6cfc02772d262253234caadc55da5f", "lines": 163, "exit_code": 0, "errors": 0, "warnings": 0, "audited_declarations": 9, "all_axioms_standard": true, "proof_token_audit": {"sorry": 0, "admit": 0, "axiom": 0, "sorryAx": 0}}
+Actual combined compiler stdout/stderr:
+'GermObstructionCore.independent_disagreement_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GermObstructionCore.half_independent_disagreement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GermObstructionCore.half_independent_disagreement_not_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GermObstructionCore.independent_disagreement_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GermObstructionCore.zero_one_of_independent_approximation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GermObstructionCore.threshold_crossing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GermObstructionCore.threshold_event_symmDiff_subset' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GermObstructionCore.threshold_disagreement_probability_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'GermObstructionCore.independent_threshold_obstruction' depends on axioms: [propext, Classical.choice, Quot.sound]
+End compiler output
+
+Finished UTC: 2026-11-26T20:18:03.416698+00:00
+Elapsed seconds: 29.658
+Total audited declarations: 21
+Formal scope: PSD matrix and Bochner-integral kernel geometry; actual Gaussian weights; independent-event probability obstruction; deterministic threshold and probability bounds.
+Not formalized: full martingale flux construction, Gaussian small-ball estimate, Borel-Cantelli germ construction, Fokker-Planck superposition, SDE strong Markov realization, or complete nonexistence theorem.
+PASS

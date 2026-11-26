@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "source": "KernelGeometry.lean",
+      "sha256": "7446bb342f79233cf2f1e6e444aed7f935df45bba3edf52dd4f0f8ba4fe7dc71",
+      "lines": 316,
+      "exit_code": 0,
+      "errors": 0,
+      "warnings": 0,
+      "audited_declarations": 12,
+      "all_axioms_standard": true,
+      "proof_token_audit": {
+        "sorry": 0,
+        "admit": 0,
+        "axiom": 0,
+        "sorryAx": 0
+      }
+    },
+    {
+      "source": "GermObstructionCore.lean",
+      "sha256": "0fc926147b2d89a870f72818cca422a68a6cfc02772d262253234caadc55da5f",
+      "lines": 163,
+      "exit_code": 0,
+      "errors": 0,
+      "warnings": 0,
+      "audited_declarations": 9,
+      "all_axioms_standard": true,
+      "proof_token_audit": {
+        "sorry": 0,
+        "admit": 0,
+        "axiom": 0,
+        "sorryAx": 0
+      }
+    }
+  ]
+}
