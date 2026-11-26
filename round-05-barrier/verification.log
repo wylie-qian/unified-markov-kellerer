@@ -1,0 +1,10 @@
+Round 05 local checks
+Python 3 / SymPy 1.14.0, exact rational arithmetic
+Exact rational sanity tests: {'bregman_nonneg_and_upper': 52488, 'barrier_envelope': 36288, 'crossing': 11024, 'active_far': 1936, 'inactive_inside': 40} total: 101776
+Symbolic checks: Gaussian exponents, tail moment identity, scale separation, dyadic clocks PASS
+Scope: exact rational finite tests and symbolic identities only; not a proof of the stochastic theorem or a Lean compiler audit.
+
+Local Lean, Lake, Elan: not found by command -v and filesystem search.
+GitHub release download probe: curl error 6, Could not resolve host: github.com.
+Actual new Lean compilation / kernel axiom audit: NOT RUN.
+At the time of this check the GitHub connector returned no combined statuses or PR workflow runs for the preceding CI setup commit 7944f6d265a1984ea553ef96f7647b3447e718d3. This is not proof that no workflow ran; successful compiler logs were not available. Preserve earlier results and distinguish uncompiled sources.

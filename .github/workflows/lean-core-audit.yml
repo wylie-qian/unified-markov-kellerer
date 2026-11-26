@@ -7,11 +7,13 @@ on:
     paths:
       - 'round-03-entrance/**'
       - 'round-04-critical-scale/**'
+      - 'round-05-barrier/**'
       - '.github/workflows/lean-core-audit.yml'
   pull_request:
     paths:
       - 'round-03-entrance/**'
       - 'round-04-critical-scale/**'
+      - 'round-05-barrier/**'
       - '.github/workflows/lean-core-audit.yml'
 
 permissions:
@@ -31,6 +33,9 @@ jobs:
           - directory: round-04-critical-scale
             source: CriticalScale.lean
             expected-audits: 6
+          - directory: round-05-barrier
+            source: BarrierCore.lean
+            expected-audits: 8
     steps:
       - uses: actions/checkout@v4
       - uses: leanprover/lean-action@v1
@@ -54,7 +59,7 @@ jobs:
           import os, pathlib, re
           log = pathlib.Path("lean-ci.log").read_text()
           expected = int(os.environ["EXPECTED_AUDITS"])
-          audited = re.findall(r"depends on axioms:\s*\[([^\]]*)\]", log, re.S)
+          audited = re.findall(r"depends on axioms:\s*\[([^\]]*)\]|does not depend on any axioms", log, re.S)
           assert len(audited) == expected, (len(audited), expected)
           allow = {"propext", "Classical.choice", "Quot.sound"}
           for deps in audited:

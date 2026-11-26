@@ -1,0 +1,11 @@
+name = "unified_markov_round5"
+version = "0.5.0"
+defaultTargets = ["BarrierCore"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "v4.19.0"
+
+[[lean_lib]]
+name = "BarrierCore"

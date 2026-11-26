@@ -1,5 +1,5 @@
 adef08b2b5f19873a913d08d5fb8160ab80bde76e8de95cf8ae5646accbad274  ./.gitignore
-ee1dea28d0a83442e56881ee77c3994ac15b9287c383e2b7bbc32701406a049b  ./README.md
+e7dad4536245819938c8fd6c9f4078bd33a6e0041d50ec0db8eb448147bfa76a  ./README.md
 8a7dfce9be2974ddb5f5e1bd1d1247dc8fa16683fe298ad8ace7e70e0fd96f11  ./round-01-gaussian/ARCHIVE_NOTE.md
 57a259b2894637f359d7d96e9982ccb55dd5a800c2da26671e18601fedf85134  ./round-01-gaussian/KELLERER_RESEARCH_REPORT.md
 8be42222fe62cce109e47423e50125fc1f9aece6e5ad76dc74ca16ee4677ca90  ./round-01-gaussian/KellererCore.lean
@@ -35,3 +35,11 @@ c2016db8a4be7faa981d4e0b9be6414c0507ef455e6777c1bd556a3259f592bb  ./round-03-ent
 1f3e81fcedd22b4d6cc4ac3f0bfdce5beabd7d9bd6437f54cb70b9caf09e2fa8  ./round-04-critical-scale/verification.log
 47ac3cfb65dd9dce90b9566e9c9878dd6c58c6f03a1813d30a4b95fbaefaba88  ./round-04-critical-scale/lakefile.toml
 55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea  ./round-04-critical-scale/lean-toolchain
+16e3f6fbdfc2165baad0ffa486e9a8a488011fc2308d7eed964fcc89fceaa3d7  ./round-05-barrier/EXPONENTIAL_BARRIER.md
+645a9b211ba2f9646334be2d1d89a10601eb7023071caf0c4c71e42edee205a4  ./round-05-barrier/BarrierCore.lean
+305677a5c203c714923ff4cb1e77d172e7c041168083ba46b3a3bb3730a46773  ./round-05-barrier/verify_barrier.py
+e73d836164ceb432e6992b06764b361446ed10cbd965b99c093f7c6b5032961f  ./round-05-barrier/verification.log
+62a274226176a58dd16f38c2cf778140abf420cd4f53c7475931cae973555e58  ./round-05-barrier/README.md
+02e3afc7858ee0860f6150610a692e5e8bfcec7b459a1fe56b39ce782a9e5c97  ./round-05-barrier/lakefile.toml
+55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea  ./round-05-barrier/lean-toolchain
+867245e684d517d9d6674f79ac327c4b7c725476ff4b3192c15a4701e686ec3b  ./.github/workflows/lean-core-audit.yml
