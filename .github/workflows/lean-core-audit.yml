@@ -1,0 +1,73 @@
+name: Lean core verification
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'round-03-entrance/**'
+      - 'round-04-critical-scale/**'
+      - '.github/workflows/lean-core-audit.yml'
+  pull_request:
+    paths:
+      - 'round-03-entrance/**'
+      - 'round-04-critical-scale/**'
+      - '.github/workflows/lean-core-audit.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  core-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - directory: round-03-entrance
+            source: EntranceCore.lean
+            expected-audits: 5
+          - directory: round-04-critical-scale
+            source: CriticalScale.lean
+            expected-audits: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: ${{ matrix.directory }}
+          build: false
+          test: false
+          lint: false
+          use-mathlib-cache: true
+      - name: Compile candidate and audit its declared core lemmas
+        working-directory: ${{ matrix.directory }}
+        shell: bash
+        env:
+          LEAN_SOURCE: ${{ matrix.source }}
+          EXPECTED_AUDITS: ${{ matrix.expected-audits }}
+        run: |
+          set -euo pipefail
+          lake env lean --version
+          lake env lean "$LEAN_SOURCE" 2>&1 | tee lean-ci.log
+          python3 - <<'PY'
+          import os, pathlib, re
+          log = pathlib.Path("lean-ci.log").read_text()
+          expected = int(os.environ["EXPECTED_AUDITS"])
+          audited = re.findall(r"depends on axioms:\s*\[([^\]]*)\]", log, re.S)
+          assert len(audited) == expected, (len(audited), expected)
+          allow = {"propext", "Classical.choice", "Quot.sound"}
+          for deps in audited:
+              actual = {s.strip() for s in deps.split(",") if s.strip()}
+              assert actual <= allow, actual
+          assert not re.search(r"\b(?:warning|error):", log), "Lean diagnostics present"
+          print(f"PASS: {len(audited)} declared scalar core lemmas; standard axioms only")
+          print("Scope: these checks do NOT establish the full stochastic-process theorems.")
+          PY
+      - name: Preserve the compiler transcript
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lean-audit-${{ matrix.directory }}
+          path: ${{ matrix.directory }}/lean-ci.log
+          if-no-files-found: ignore
