@@ -15,14 +15,14 @@ This repository records an AI-assisted mathematical research project on multidim
 | 02 | [Blind subspace obstruction](round-02-general/BLIND_SUBSPACE_OBSTRUCTION.md) | Frozen-branch and blind-subspace mechanisms. |
 | 02 | [Literature audit](round-02-general/LITERATURE_AUDIT.md) | Literature dependencies, caveats, and novelty boundaries. |
 | 03 | [Vanishing adaptive regularization and entrance classification](round-03-entrance/ENTRANCE_THEOREMS.md) | Draft proofs of zero-initial-noise adaptive repair, exact universal continuous-path raw-filtration classification, and a quantitative entrance defect criterion. Fixed-path usual-filtration corank one remains unresolved. |
-
 | 04 | [Critical noise scales](round-04-critical-scale/CRITICAL_SCALE_THEOREMS.md) | Draft sharp universal power-law exponent for deterministic initial states in the energy clock; log-scale obstruction for exponent greater than two; corank-one sufficient subclass with frozen transverse marginals. |
-
 | 05 | [Exponential barrier and logarithmic scale](round-05-barrier/EXPONENTIAL_BARRIER.md) | Tail-summability obstruction for general convolution noise; counterexamples for every positive logarithmic correction exponent, even with smooth input densities. Together with the round-04 positive draft, a sharp log-power family dichotomy. |
+
+| 06 | [Exact energy-clock summability criterion](round-06-criterion/SUMMABILITY_CRITERION.md) | Draft necessary-and-sufficient universal criterion for deterministic starts and isotropic locally bi-Lipschitz noise schedules. Weak Poincare entrance dissipation and rare-rectangle obstruction match; the double-log power threshold is exactly one. Sublinear noise does not universally imply failure. |
 
 ## Verification and reproducibility
 
-Stages 01 and 02 preserve their original Lean 4.19.0 / Mathlib v4.19.0 project configuration. The archived build logs report successful compilation and standard-axiom-only audits for 11 declarations in stage 01 and 21 in stage 02. These checks concern the listed matrix, integral and probability lemmas, not a complete formalization of the stochastic-process theorems. The initial archive was packaged without recompiling; original source hashes were verified. Stages 03 through 05 include uncompiled Lean candidates and exact algebraic checks; their stochastic-process proofs and Lean sources have not been independently or kernel verified. Stage 05 also includes 101,776 exact rational sanity checks. The CI workflow is configured, but no successful compiler transcript was available when stage 05 was prepared. See the [proof dependency audit](round-04-critical-scale/PROOF_DEPENDENCY_AUDIT.md) for the distinction between formalized lemmas and mathematical conclusions. Temporary workspace prefixes in logs were redacted for publication (see the archive notes).
+Stages 01 and 02 preserve their original Lean 4.19.0 / Mathlib v4.19.0 project configuration. The archived build logs report successful compilation and standard-axiom-only audits for 11 declarations in stage 01 and 21 in stage 02. These checks concern the listed matrix, integral and probability lemmas, not a complete formalization of the stochastic-process theorems. The initial archive was packaged without recompiling; original source hashes were verified. Stages 03 through 06 include uncompiled Lean candidates and exact algebraic checks; their stochastic-process proofs and Lean sources have not been independently or kernel verified. Stage 06 supplies 40,707 exact rational checks and symbolic identities; see its verification log. Stage 05 also includes 101,776 exact rational sanity checks. The CI workflow is configured, but no successful compiler transcript for stages 03 through 06 was available when stage 06 was prepared. See the [proof dependency audit](round-04-critical-scale/PROOF_DEPENDENCY_AUDIT.md) for the distinction between formalized lemmas and mathematical conclusions. Temporary workspace prefixes in logs were redacted for publication (see the archive notes).
 
 With Elan and a network connection, run from each stage's directory:
 
@@ -48,6 +48,10 @@ cd ../round-05-barrier
 lake update
 lake exe cache get
 lake env lean BarrierCore.lean
+cd ../round-06-criterion
+lake update
+lake exe cache get
+lake env lean CriterionCore.lean
 ```
 
 From the repository root, verify the delivered file checksums using `sha256sum -c SHA256SUMS` (or `shasum -a 256 -c SHA256SUMS` on macOS).
@@ -55,7 +59,7 @@ From the repository root, verify the delivered file checksums using `sha256sum -
 ## Open research targets
 
 - Classify fixed prescribed time-dependent Gaussian smoothing with exactly one initial null direction under the usual filtration, especially with evolving transverse coordinates. Stage 04 settles a frozen-transverse subclass.
-- Classify the log-log/iterated-log and general sublinear energy-clock schedules beyond stage 05's sharp log-power family and tail-summability obstruction; extend the positive theorem to general initial laws.
+- Extend stage 06's exact energy-clock criterion to noise schedules that are not locally bi-Lipschitz, general initial laws, and anisotropic covariance paths; determine the instance-specific rather than universal threshold.
 - Obtain distribution-level necessary and sufficient conditions for Markov realization.
 - Resolve the general unregularized raw natural filtration question distinguished in the regularized Kellerer literature (stage 03 classifies the continuous-path universally Gaussian-regularized case, not this general question).
 - Characterize instance-specific minimum regularization for non-Gaussian marginals under a specified cost.

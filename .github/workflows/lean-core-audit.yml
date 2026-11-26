@@ -8,12 +8,14 @@ on:
       - 'round-03-entrance/**'
       - 'round-04-critical-scale/**'
       - 'round-05-barrier/**'
+      - 'round-06-criterion/**'
       - '.github/workflows/lean-core-audit.yml'
   pull_request:
     paths:
       - 'round-03-entrance/**'
       - 'round-04-critical-scale/**'
       - 'round-05-barrier/**'
+      - 'round-06-criterion/**'
       - '.github/workflows/lean-core-audit.yml'
 
 permissions:
@@ -36,6 +38,9 @@ jobs:
           - directory: round-05-barrier
             source: BarrierCore.lean
             expected-audits: 8
+          - directory: round-06-criterion
+            source: CriterionCore.lean
+            expected-audits: 9
     steps:
       - uses: actions/checkout@v4
       - uses: leanprover/lean-action@v1

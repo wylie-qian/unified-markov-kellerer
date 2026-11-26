@@ -1,0 +1,15 @@
+Round 06 verification record
+Executed: python3 verify_criterion.py
+Script SHA256: c60e8618677b82ba68142d7f7c3191a85e7c6e97471e905d9b695208f263f0cc
+Output:
+Symbolic identities: clock derivative, rare-branch energy, Gaussian exponents, variance reduction PASS
+Exact dyadic ratio tests: 4320 PASS
+Exact separated-center barrier tests: 36288 PASS
+Exact rare-event tests: 99 PASS
+Scope: finite tests and symbolic identities only, not a proof of the main theorem or a Lean audit.
+
+Local command -v lean/lake/elan: no executable found.
+GitHub download probe: curl (6) Could not resolve host: github.com.
+Actual Lean compilation and kernel axiom audit of CriterionCore.lean: NOT RUN.
+GitHub combined status for preceding commit 4315f6a5068350864c5594b4fe0b26f52a5be9cf: empty. No successful compiler transcript available.
+Main mathematical manuscript depends on explicit external stochastic and PDE results; not fully formalized or independently referee-verified.
