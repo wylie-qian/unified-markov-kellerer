@@ -15,9 +15,11 @@ This repository records an AI-assisted mathematical research project on multidim
 | 02 | [Blind subspace obstruction](round-02-general/BLIND_SUBSPACE_OBSTRUCTION.md) | Frozen-branch and blind-subspace mechanisms. |
 | 02 | [Literature audit](round-02-general/LITERATURE_AUDIT.md) | Literature dependencies, caveats, and novelty boundaries. |
 
+| 03 | [Vanishing adaptive regularization and entrance classification](round-03-entrance/ENTRANCE_THEOREMS.md) | Draft proofs of zero-initial-noise adaptive repair, exact universal continuous-path raw-filtration classification, and a quantitative entrance defect criterion. Fixed-path usual-filtration corank one remains unresolved. |
+
 ## Verification and reproducibility
 
-Both stages preserve their original Lean 4.19.0 / Mathlib v4.19.0 project configuration. The archived build logs report successful compilation and standard-axiom-only audits for 11 declarations in stage 01 and 21 in stage 02. These checks concern the listed matrix, integral and probability lemmas, not a complete formalization of the stochastic-process theorems. The archive was packaged without recompiling; original source hashes were verified. Temporary workspace prefixes in logs were redacted for publication (see the archive notes).
+Stages 01 and 02 preserve their original Lean 4.19.0 / Mathlib v4.19.0 project configuration. The archived build logs report successful compilation and standard-axiom-only audits for 11 declarations in stage 01 and 21 in stage 02. These checks concern the listed matrix, integral and probability lemmas, not a complete formalization of the stochastic-process theorems. The initial archive was packaged without recompiling; original source hashes were verified. Stage 03 includes an uncompiled Lean candidate and four exact symbolic checks; its stochastic-process proofs and Lean source have not been independently or kernel verified. Temporary workspace prefixes in logs were redacted for publication (see the archive notes).
 
 With Elan and a network connection, run from each stage's directory:
 
@@ -31,15 +33,19 @@ lake update
 lake exe cache get
 lake env lean KernelGeometry.lean
 lake env lean GermObstructionCore.lean
+cd ../round-03-entrance
+lake update
+lake exe cache get
+lake env lean EntranceCore.lean
 ```
 
 From the repository root, verify the delivered file checksums using `sha256sum -c SHA256SUMS` (or `shasum -a 256 -c SHA256SUMS` on macOS).
 
 ## Open research targets
 
-- Classify the initial corank-one case for time-dependent Gaussian smoothing when jumps are allowed.
+- Classify fixed prescribed time-dependent Gaussian smoothing with exactly one initial null direction under the usual filtration, especially when the covariance is positive definite at every positive time.
 - Obtain distribution-level necessary and sufficient conditions for Markov realization.
-- Resolve the raw natural filtration question distinguished in the regularized Kellerer literature.
+- Resolve the general unregularized raw natural filtration question distinguished in the regularized Kellerer literature (stage 03 classifies the continuous-path universally Gaussian-regularized case, not this general question).
 - Characterize instance-specific minimum regularization for non-Gaussian marginals under a specified cost.
 - Independently check the mathematical drafts, extend formal verification, and establish the exact novelty of the results.
 

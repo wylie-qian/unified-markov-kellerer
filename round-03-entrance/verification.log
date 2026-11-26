@@ -1,0 +1,15 @@
+Round 03 verification status
+Lean executable in local execution environment: not found
+Lake executable: not found
+Attempt to access Lean 4.19.0 GitHub release: DNS resolution failed
+Actual Lean compilation: NOT RUN
+Actual kernel axiom audit: NOT RUN
+Previous rounds' audited Lean files and logs are preserved unchanged.
+The new source is an uncompiled candidate; do not report a successful build.
+Mathematical proof scope and external theorem dependencies are documented in ENTRANCE_THEOREMS.md.
+Independent local symbolic checks (SymPy, exact arithmetic): PASS (4/4).
+- Young inequality square identity.
+- Logarithmic schedule derivative.
+- Exponential integrable majorant integral: 2 + 6/eta.
+- Difference-of-squares identity used in the defect bound.
+These checks are not Lean compilation or verification of the stochastic-process proof.

@@ -1,5 +1,5 @@
 adef08b2b5f19873a913d08d5fb8160ab80bde76e8de95cf8ae5646accbad274  ./.gitignore
-12241d6931977feedf6bc1cf1b935b60fe3a467fe6ca9bad27531c71a1cc2b27  ./README.md
+7c23a61203ee94a060195f1c6320df95381d76289ff6cb7fc000237db543fed5  ./README.md
 8a7dfce9be2974ddb5f5e1bd1d1247dc8fa16683fe298ad8ace7e70e0fd96f11  ./round-01-gaussian/ARCHIVE_NOTE.md
 57a259b2894637f359d7d96e9982ccb55dd5a800c2da26671e18601fedf85134  ./round-01-gaussian/KELLERER_RESEARCH_REPORT.md
 8be42222fe62cce109e47423e50125fc1f9aece6e5ad76dc74ca16ee4677ca90  ./round-01-gaussian/KellererCore.lean
@@ -22,3 +22,9 @@ d3888c3278714ce30f8c95131ace6f4e7dcf62667d34e267909569d5568c93e9  ./round-02-gen
 062da135925bb68dd028150b8c86da07ccb58faa8b4861ad3aef8283c322ce3a  ./round-02-general/lakefile.toml
 55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea  ./round-02-general/lean-toolchain
 8f67028e63b50477b4aece4232b379786511985c64b65f3505f28b38d15c71a4  ./round-02-general/lean_build.log
+ef6ad8a1f298072fedcde847a65add9b3d0a50721776452fa6e3f5060e671957  ./round-03-entrance/ENTRANCE_THEOREMS.md
+120e722af1838e58b6821d3db2983c5dc4592d5d09584c55812bd7046335b67a  ./round-03-entrance/EntranceCore.lean
+852456b74b815acb0f9fb520b0769eb47c06510180ca89abc9c4772534901099  ./round-03-entrance/README.md
+c2016db8a4be7faa981d4e0b9be6414c0507ef455e6777c1bd556a3259f592bb  ./round-03-entrance/verification.log
+5f98bed62151d5acd6835a249044297980734acce858e31567f4f26495d82262  ./round-03-entrance/lakefile.toml
+55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea  ./round-03-entrance/lean-toolchain
