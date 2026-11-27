@@ -4,6 +4,20 @@ Research archive · initial snapshot: 2026-11-27 (UTC+8)
 
 This repository records an AI-assisted mathematical research project on multidimensional peacocks, Kellerer-type Markov martingale realization, and regularization. The aim is to characterize existence, obstructions, and minimal regularization beyond Gaussian marginals. The manuscripts are research drafts, not peer-reviewed results; priority and the complete stochastic-process arguments require independent review. This archive does not claim a solution to the general multidimensional Kellerer or raw-filtration problem.
 
+## Research governance — start here
+
+The project now has a fixed research contract and a theorem-by-theorem evidence ledger. Human contributors and agents should read these documents before starting a new round.
+
+| Document | Purpose |
+| --- | --- |
+| [AGENTS.md](AGENTS.md) | Mandatory agent workflow, independent proof/counterexample/audit passes, verification and round handoff template. |
+| [RESEARCH_MASTER_PLAN.md](RESEARCH_MASTER_PLAN.md) | Precise T1-P/T1-E (universal classification), T2 (minimal regularization), T3 (unregularized raw-filtration question), priorities and completion definitions. |
+| [PROOF_GRAPH.md](PROOF_GRAPH.md) | Dependency DAG, explicit missing lemmas and external theorem hypothesis checks. |
+| [ACCEPTANCE_CRITERIA.md](ACCEPTANCE_CRITERIA.md) | Nine hard gates and separate mathematics, Lean, and novelty status levels. |
+| [THEOREM_REGISTRY.md](THEOREM_REGISTRY.md) | Stable theorem IDs, exact scope, current evidence, dependencies and open obligations. |
+
+**Next work:** audit the round-06 scalar theorem, attack the fixed-path corank-one case with evolving transverse coordinates (WP1/O-01) and the anisotropic energy-clock classification (WP2/O-02), with formal verification in parallel. T1–T3 remain open; no full stochastic-process theorem has been Lean-certified. New rounds must update the registry, proof graph and evidence ledger rather than merely append another manuscript.
+
 ## Research snapshot
 
 | Stage | Material | Scope |
@@ -17,7 +31,6 @@ This repository records an AI-assisted mathematical research project on multidim
 | 03 | [Vanishing adaptive regularization and entrance classification](round-03-entrance/ENTRANCE_THEOREMS.md) | Draft proofs of zero-initial-noise adaptive repair, exact universal continuous-path raw-filtration classification, and a quantitative entrance defect criterion. Fixed-path usual-filtration corank one remains unresolved. |
 | 04 | [Critical noise scales](round-04-critical-scale/CRITICAL_SCALE_THEOREMS.md) | Draft sharp universal power-law exponent for deterministic initial states in the energy clock; log-scale obstruction for exponent greater than two; corank-one sufficient subclass with frozen transverse marginals. |
 | 05 | [Exponential barrier and logarithmic scale](round-05-barrier/EXPONENTIAL_BARRIER.md) | Tail-summability obstruction for general convolution noise; counterexamples for every positive logarithmic correction exponent, even with smooth input densities. Together with the round-04 positive draft, a sharp log-power family dichotomy. |
-
 | 06 | [Exact energy-clock summability criterion](round-06-criterion/SUMMABILITY_CRITERION.md) | Draft necessary-and-sufficient universal criterion for deterministic starts and isotropic locally bi-Lipschitz noise schedules. Weak Poincare entrance dissipation and rare-rectangle obstruction match; the double-log power threshold is exactly one. Sublinear noise does not universally imply failure. |
 
 ## Verification and reproducibility
